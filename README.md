@@ -9,8 +9,7 @@
 | _Zhafira Amanda_                  |
 |                                   |
 
-ID Fasil          : _F-FSW24001086_
-Nama Fasilitator  : _Imam Taufiq Hermawan_
+F-FSW24001086 - Imam Taufiq Hermawan_
 
 <hr>
 
