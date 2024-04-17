@@ -1,3 +1,20 @@
+# Kelompok 4 - FSW-1
+
+| **Nama Anggota  **                |
+| --------------------------------- |
+| _Ananda Ias Falah Surya Gemilang_ |
+| _Muhammad Suryandoko_             |
+| _Nadilla Izzati Abhinaya_         |
+| _Naufal Ady Saputro_              |
+| _Zhafira Amanda_                  |
+|                                   |
+
+| **ID Fasil**         | _F-FSW24001086_        |
+| **Nama Fasilitator** | _Imam Taufiq Hermawan_ |
+|                      |                        |
+
+<hr>
+
 # API CRUD Restaurant
 Proyek ini bertujuan untuk mengelola pesanan makanan dalam sebuah restoran atau layanan pengiriman makanan. Dalam proyek ini, terdapat beberapa jenis relasi antara entitas yang berbeda, seperti makanan, kategori makanan, pengguna, pesanan, dan restoran.
 
