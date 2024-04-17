@@ -1,6 +1,6 @@
 # Kelompok 4 - FSW-1
 
-| **Nama Anggota  **                |
+|          Nama Anggota             |
 | --------------------------------- |
 | _Ananda Ias Falah Surya Gemilang_ |
 | _Muhammad Suryandoko_             |
@@ -9,8 +9,8 @@
 | _Zhafira Amanda_                  |
 |                                   |
 
-**ID Fasil** : _F-FSW24001086_
-**Nama Fasilitator** : _Imam Taufiq Hermawan_
+ID Fasil          : _F-FSW24001086_
+Nama Fasilitator  : _Imam Taufiq Hermawan_
 
 <hr>
 
