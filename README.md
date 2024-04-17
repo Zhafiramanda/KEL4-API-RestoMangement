@@ -9,7 +9,6 @@ Proyek ini bertujuan untuk mengelola pesanan makanan dalam sebuah restoran atau 
 2. **Pesanan (Orders) dan Makanan (Foods)**:
    - Setiap pesanan terdiri dari beberapa makanan.
    - Satu makanan bisa termasuk dalam banyak pesanan yang berbeda.
-   - Digunakan tabel penengah untuk merepresentasikan entitas "pesanan makanan".
 
 3. **Pesanan (Orders) dan Pengguna (User)**:
    - Setiap pesanan terkait dengan satu pengguna yang melakukan pesanan tersebut.
