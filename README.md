@@ -76,3 +76,5 @@ app.use("/api/v1/food", require("./routes/foodRoutes"));
 ```
 
 Pastikan untuk menyesuaikan versi API dan rute yang digunakan sesuai dengan kebutuhan
+
+![Untitled-2](https://github.com/Zhafiramanda/KEL4-API-RestoMangement/assets/100135755/277cac44-5d6c-4d52-ba65-652c3a680486)
