@@ -65,9 +65,9 @@ app.use("/api/v1/food", require("./routes/foodRoutes"));
 // });
 
 // Handle 404
-app.get("*", (req, res) => {
-  res.status(404).render("404");
-});
+// app.get("*", (req, res) => {
+//   res.status(404).render("404");
+// });
 
 const PORT = process.env.PORT || 5000;
 
