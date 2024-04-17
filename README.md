@@ -1,4 +1,4 @@
-# Kelompok 4 - FSW-1
+# Kelompok 4 - FSW1
 
 |          Nama Anggota             |
 | --------------------------------- |
@@ -9,7 +9,7 @@
 | _Zhafira Amanda_                  |
 |                                   |
 
-F-FSW24001086 - Imam Taufiq Hermawan_
+F-FSW24001086 - Imam Taufiq Hermawan
 
 <hr>
 
