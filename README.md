@@ -1,7 +1,7 @@
 # API CRUD Restaurant
 
-
 ## Penggunaan
+
 1. Pastikan MongoDB berjalan di latar belakang.
 2. Jalankan `npm start` untuk memulai server.
 3. API akan berjalan di http://localhost:8000/ secara default.
@@ -9,3 +9,70 @@
 
 ## Endpoint API
 
+### Endpoint Auth
+
+| Method | Endpoint       | Deskripsi                  |
+| ------ | -------------- | -------------------------- |
+| POST   | /auth/register | Mendaftarkan pengguna baru |
+| POST   | /auth/login    | Masuk ke akun pengguna     |
+
+### Endpoint category
+
+| Method | Endpoint    | Deskripsi                     |
+| ------ | ----------- | ----------------------------- |
+| POST   | /create     | Membuat kategori baru         |
+| GET    | /getAll     | Mendapatkan semua kategori    |
+| PUT    | /update/:id | Memperbarui kategori yang ada |
+| DELETE | /delete/:id | Menghapus kategori yang ada   |
+
+### Endpoint food
+
+| Method | Endpoint             | Deskripsi                                           |
+| ------ | -------------------- | --------------------------------------------------- |
+| POST   | /create              | Membuat makanan baru                                |
+| GET    | /getAll              | Mendapatkan semua makanan                           |
+| GET    | /get/:id             | Mendapatkan makanan berdasarkan ID                  |
+| GET    | /getByRestaurant/:id | Mendapatkan makanan berdasarkan restoran            |
+| PUT    | /update/:id          | Memperbarui makanan                                 |
+| DELETE | /delete/:id          | Menghapus makanan                                   |
+| POST   | /placeorder          | Menempatkan pesanan                                 |
+| POST   | /orderStatus/:id     | Mengubah status pesanan (memerlukan otorisasi role) |
+
+### Endpoint restaurant
+
+| Method | Endpoint    | Deskripsi                           |
+| ------ | ----------- | ----------------------------------- |
+| POST   | /create     | Membuat restoran baru               |
+| GET    | /getAll     | Mendapatkan semua restoran          |
+| GET    | /get/:id    | Mendapatkan restoran berdasarkan ID |
+| DELETE | /delete/:id | Menghapus restoran                  |
+
+### Endpoint user 
+| Method | Endpoint        | Deskripsi                       |
+| ------ | --------------- | ------------------------------- |
+| GET    | /getUser        | Mendapatkan informasi pengguna  |
+| PUT    | /updateUser     | Memperbarui profil pengguna     |
+| POST   | /updatePassword | Memperbarui kata sandi pengguna |
+| POST   | /resetPassword  | Mereset kata sandi pengguna     |
+| DELETE | /deleteUser/:id | Menghapus profil pengguna       |
+
+Tentu, berikut adalah tambahan catatan untuk Anda:
+
+### Catatan Penting
+
+1. **Pemakaian Postman**: Pastikan Anda menggunakan aplikasi seperti Postman untuk mengakses dan menguji endpoint-endpoint API. Pastikan untuk menyertakan token otentikasi yang diperlukan dalam header saat mengakses endpoint yang memerlukan otorisasi.
+
+2. **Memperhatikan Endpoint**: Perhatikan dengan baik alamat endpoint yang disediakan untuk setiap fitur API. Pastikan Anda menggunakan endpoint yang sesuai dengan tindakan yang ingin Anda lakukan.
+
+3. **Perhatikan Otorisasi**: Beberapa endpoint memerlukan otentikasi pengguna atau otorisasi khusus (misalnya, peran tertentu). Pastikan untuk menyertakan token otentikasi yang valid dan memeriksa peran pengguna saat mengakses endpoint yang memerlukan otorisasi.
+
+```javascript
+// Route untuk URL root
+app.use("/api/v1/auth", require("./routes/authRoutes"));
+app.use("/api/v1/user", require("./routes/userRoutes"));
+app.use("/api/v1/restaurant", require("./routes/restaurantRoutes"));
+app.use("/api/v1/category", require("./routes/categoryRoutes"));
+app.use("/api/v1/food", require("./routes/foodRoutes"));
+```
+
+Pastikan untuk menyesuaikan versi API dan rute yang digunakan sesuai dengan kebutuhan
