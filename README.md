@@ -1,7 +1,25 @@
 # API CRUD Restaurant
+Proyek ini bertujuan untuk mengelola pesanan makanan dalam sebuah restoran atau layanan pengiriman makanan. Dalam proyek ini, terdapat beberapa jenis relasi antara entitas yang berbeda, seperti makanan, kategori makanan, pengguna, pesanan, dan restoran.
 
+## Skema Relasi
+1. **Kategori Makanan (Category) dan Makanan (Foods)**:
+   - Setiap makanan memiliki kategori yang terkait dengannya.
+   - Satu kategori dapat memiliki banyak makanan, tetapi satu makanan hanya terkait dengan satu kategori.
+
+2. **Pesanan (Orders) dan Makanan (Foods)**:
+   - Setiap pesanan terdiri dari beberapa makanan.
+   - Satu makanan bisa termasuk dalam banyak pesanan yang berbeda.
+   - Digunakan tabel penengah untuk merepresentasikan entitas "pesanan makanan".
+
+3. **Pesanan (Orders) dan Pengguna (User)**:
+   - Setiap pesanan terkait dengan satu pengguna yang melakukan pesanan tersebut.
+   - Satu pengguna dapat memiliki banyak pesanan, tetapi satu pesanan hanya terkait dengan satu pengguna.
+
+4. **Makanan (Foods) dan Restoran (Restaurant)**:
+   - Setiap makanan berasal dari satu restoran.
+   - Satu restoran dapat memiliki banyak makanan, tetapi satu makanan hanya berasal dari satu restoran.
+     
 ## Penggunaan
-
 1. Pastikan MongoDB berjalan di latar belakang.
 2. Jalankan `npm start` untuk memulai server.
 3. API akan berjalan di http://localhost:8000/ secara default.
