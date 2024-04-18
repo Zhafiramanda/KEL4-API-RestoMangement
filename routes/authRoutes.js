@@ -11,11 +11,11 @@ const router = express.Router();
 //routes
 //REGISTER || POST
 router.post("/register", registerController);
-router.get("/register", registerForm);
+router.get("/registerForm", registerForm);
 
 
 // LOGIN || POST
 router.post("/login", loginController);
-router.get("/login", loginForm);
+router.get("/loginForm", loginForm);
 
 module.exports = router;

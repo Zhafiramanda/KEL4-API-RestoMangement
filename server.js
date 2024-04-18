@@ -59,6 +59,12 @@ app.use("/api/v1/restaurant", require("./routes/restaurantRoutes"));
 app.use("/api/v1/category", require("./routes/categoryRoutes"));
 app.use("/api/v1/food", require("./routes/foodRoutes"));
 
+// app.get("/public/scripts/register.js", function (req, res) {
+//   res.set("Content-Type", "application/javascript");
+//   // Mengirimkan file JavaScript
+// });
+
+
 // Render EJS template for the root URL
 // app.get("/", (req, res) => {
 //   res.render("index", { title: "Food Server APP API BASE PROJECT" });

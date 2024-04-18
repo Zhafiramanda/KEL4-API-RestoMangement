@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Successful</title>
+</head>
+<body>
+    <h1>Registration Successful!</h1>
+    <p>You will be redirected to the login page in <span id="countdown">3</span> seconds.</p>
+
+    <script>
+        // Function to countdown and redirect
+        function countdown() {
+            var seconds = 3; // Set the number of seconds for the countdown
+            var countdownElement = document.getElementById("countdown");
+
+            var countdownInterval = setInterval(function() {
+                seconds--;
+                countdownElement.textContent = seconds;
+
+                // Redirect to login page when countdown reaches 0
+                if (seconds <= 0) {
+                    clearInterval(countdownInterval);
+                    window.location.href = "/api/v1/auth/loginForm";
+                }
+            }, 1000); // Update countdown every second
+        }
+
+        // Start the countdown when the page loads
+        window.onload = function() {
+            countdown();
+        };
+    </script>
+</body>
+</html>
