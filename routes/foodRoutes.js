@@ -17,7 +17,7 @@ const router = express.Router();
 
 //routes
 //CREATE FOOD
-router.post("/create", authMiddleware, createFoodController);
+router.post("/create", authMiddleware, roleAuthorizationMiddleware, createFoodController);
 
 //GET ALL FOOD
 router.get("/getAll", getAllFoodsController);
@@ -29,13 +29,28 @@ router.get("/get/:id", getFoodByIdController);
 router.get("/getByResturant/:id", getFoodByRestaurantController);
 
 // UPDATE FOOD
-router.put("/update/:id", authMiddleware, updateFoodController);
+router.put(
+  "/update/:id",
+  authMiddleware,
+  roleAuthorizationMiddleware,
+  updateFoodController
+);
 
 // DELETE FOOD
-router.delete("/delete/:id", authMiddleware, deleteFoodController);
+router.delete(
+  "/delete/:id",
+  authMiddleware,
+  roleAuthorizationMiddleware,
+  deleteFoodController
+);
 
 // PLACE ORDER
-router.post("/placeorder", authMiddleware, placeOrderController);
+router.post(
+  "/placeorder",
+  authMiddleware,
+  roleAuthorizationMiddleware,
+  placeOrderController
+);
 
 // ORDER STATUS
 router.post(
