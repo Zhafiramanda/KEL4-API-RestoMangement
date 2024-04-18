@@ -58,6 +58,7 @@ app.use("/api/v1/user", require("./routes/userRoutes"));
 app.use("/api/v1/restaurant", require("./routes/restaurantRoutes"));
 app.use("/api/v1/category", require("./routes/categoryRoutes"));
 app.use("/api/v1/food", require("./routes/foodRoutes"));
+app.use("/page", require("./routes/pageRoutes"));
 
 // app.get("/public/scripts/register.js", function (req, res) {
 //   res.set("Content-Type", "application/javascript");
