@@ -4,10 +4,61 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Registration Successful</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-image: linear-gradient(120deg, #ffb3ba, #ffdfba, #ffffba); /* Latar belakang gradient hangat */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .container {
+            max-width: 600px; /* Lebih besar */
+            background-color: rgba(255, 255, 255, 0.5); /* Warna putih dengan transparansi 0.5 */
+            backdrop-filter: blur(10px); /* Efek blur */
+            border-radius: 10px;
+            padding: 40px; /* Lebih banyak ruang */
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.3); /* Efek bayangan dengan transparansi 0.3 */
+            text-align: center;
+        }
+        h1 {
+            color: #4CAF50;
+            margin-bottom: 20px;
+        }
+        p {
+            margin-bottom: 20px;
+        }
+        .pizza-loader {
+            width: 100px;
+            height: 100px;
+            background-image: url('/images/pizza.gif'); /* Tambahkan animasi loading pizza */
+            background-size: cover;
+            margin: 0 auto 20px; /* Posisikan di tengah */
+            animation: spin 2s linear infinite; /* Animasi putar */
+        }
+        @keyframes spin {
+            0% {
+                transform: rotate(0deg);
+            }
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+        #countdown {
+            font-size: 24px;
+            color: #333;
+            margin-bottom: 10px;
+        }
+    </style>
 </head>
 <body>
-    <h1>Registration Successful!</h1>
-    <p>You will be redirected to the login page in <span id="countdown">3</span> seconds.</p>
+    <div class="container">
+        <div class="pizza-loader"></div>
+        <h1>Registration Successful!</h1>
+        <p>You will be redirected to the login page in <span id="countdown">3</span> seconds.</p>
+    </div>
 
     <script>
         // Function to countdown and redirect
@@ -22,7 +73,7 @@
                 // Redirect to login page when countdown reaches 0
                 if (seconds <= 0) {
                     clearInterval(countdownInterval);
-                    window.location.href = "/api/v1/auth/loginForm";
+                    window.location.href = "/page/loginForm";
                 }
             }, 1000); // Update countdown every second
         }

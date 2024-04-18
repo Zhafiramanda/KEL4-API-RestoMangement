@@ -1,0 +1,50 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+.background-image {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('/images/bg-food.png'); /* Ganti dengan path menuju gambar makanan yang akan diblur */
+    background-size: cover;
+    filter: blur(8px); /* Menyesuaikan tingkat blur yang diinginkan */
+}
+
+.login-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(255, 255, 255, 0.8); /* Menyesuaikan tingkat kecerahan background form login */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    text-align: center;
+}
+
+.login-container h1 {
+    margin-bottom: 20px;
+}
+
+.login-container form {
+    margin-bottom: 20px;
+}
+
+.login-container p {
+    margin-top: 20px;
+}
+
+/* Styling untuk tombol Register */
+.login-container a {
+    color: #007bff; /* Ganti dengan warna yang diinginkan */
+    text-decoration: none;
+}
+
+.login-container a:hover {
+    text-decoration: underline;
+}

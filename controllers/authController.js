@@ -3,10 +3,6 @@ const bcrypt = require("bcryptjs");
 const JWT = require("jsonwebtoken");
 
 // REGISTER
-const registerForm = async (req, res) => {
-  res.render("register");
-};
-
 const registerController = async (req, res) => {
   try {
     const { userName, email, password } = req.body;
@@ -46,16 +42,7 @@ const registerController = async (req, res) => {
   }
 };
 
-
-
-
-
-
 // LOGIN
-const loginForm = async (req, res) => {
-  res.render("login");
-};
-
 const loginController = async (req, res) => {
   try {
     const { email, password } = req.body;
@@ -112,6 +99,4 @@ function validateEmail(email) {
 module.exports = {
   registerController,
   loginController,
-  registerForm,
-  loginForm,
 };
