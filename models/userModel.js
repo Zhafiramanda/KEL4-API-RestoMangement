@@ -20,7 +20,7 @@ const userSchema = new mongoose.Schema(
       type: String,
       required: [true, "user type is required"],
       enum: ["admin", "staff", "manager"],
-      default: "admin",
+      default: "staff",
     },
     profile: {
       type: String,
