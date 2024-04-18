@@ -4,50 +4,52 @@ const JWT = require("jsonwebtoken");
 
 // REGISTER
 const registerForm = async (req, res) => {
-  res.render("register")
-}
+  res.render("register");
+};
 
 const registerController = async (req, res) => {
   try {
     const { userName, email, password } = req.body;
-    //validation
+    // Validation
     if (!userName || !email || !password) {
-      return res.status(500).send({
+      return res.status(400).json({
         success: false,
-        message: "Please Provide All Fields",
+        message: "Please provide all fields.",
       });
     }
-    // chekc user
-    const exisiting = await userModel.findOne({ email });
-    if (exisiting) {
-      return res.status(500).send({
-        success: false,
-        message: "Email Already Registerd please Login",
+    // Check if user exists
+    const existingUser = await userModel.findOne({ email });
+    if (existingUser) {
+      return res.render("error", {
+        message: "Email already registered. Please login.",
       });
     }
-    //hashing password
-    var salt = bcrypt.genSaltSync(10);
+    // Hash password
+    const salt = await bcrypt.genSalt(10);
     const hashedPassword = await bcrypt.hash(password, salt);
-    //create new user
-    const user = await userModel.create({
+    // Create new user
+    const newUser = new userModel({
       userName,
       email,
       password: hashedPassword,
     });
-    res.status(201).send({
-      success: true,
-      message: "Successfully Registered",
-      user,
-    });
+    await newUser.save();
+    console.log("New user registered:", newUser);
+    // Return success response
+    return res.render("partials/register-success");
   } catch (error) {
-    console.log(error);
-    res.status(500).send({
-      success: false,
-      message: "Error In Register API",
-      error,
+    console.error("Error in registerController:", error);
+    // Render error page
+    return res.render("error", {
+      message: "Error in registration. Please try again later.",
     });
   }
 };
+
+
+
+
+
 
 // LOGIN
 const loginForm = async (req, res) => {
@@ -100,6 +102,12 @@ const loginController = async (req, res) => {
     });
   }
 };
+
+// Fungsi untuk validasi email
+function validateEmail(email) {
+  const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  return re.test(email);
+}
 
 module.exports = {
   registerController,
