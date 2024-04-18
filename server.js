@@ -41,7 +41,7 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cors());
 app.use(morgan("dev"));
 
-// Templating Engine
+// // Templating Engine
 app.use(expressLayouts);
 app.set("layout", "layouts/main");
 app.set("view engine", "ejs");
