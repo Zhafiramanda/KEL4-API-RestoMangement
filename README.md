@@ -88,6 +88,14 @@ Proyek ini bertujuan untuk mengelola pesanan makanan dalam sebuah restoran atau 
 | POST   | /resetPassword  | Mereset kata sandi pengguna     |
 | DELETE | /deleteUser/:id | Menghapus profil pengguna       |
 
+
+### Endpoint Page 
+| Method | Endpoint        | Deskripsi                       |
+| ------ | --------------- | ------------------------------- |
+| GET    | /loginForm      | Menampilkan form login          |
+| GET    | /registerForm   | Menampilkan form register       |
+
+
 Tentu, berikut adalah tambahan catatan untuk Anda:
 
 ### Catatan Penting
